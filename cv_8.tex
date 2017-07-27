@@ -32,12 +32,18 @@
 \usepackage{hyperref} % Required for adding links	and customizing them
 \hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
 
-\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+\newlength{\datebox}\settowidth{\datebox}{Aug 2015} % Set the width of the date box in each block
 
-\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
 \vspace{0.5em}} % Add some white space after each new entry
 
+\newcommand{\NewEntrySmall}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{-1em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+
 \newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+\usepackage[vmargin=0.75in, left=1.75in, right=1.5in]{geometry}
 
 %----------------------------------------------------------------------------------------
 
@@ -49,23 +55,19 @@
 %	NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{cv}{\spacedallcaps{John Smith}}\vspace{1.5em} % Your name
+\begin{cv}{\spacedallcaps{Katie Shamash}}\vspace{1.5em} % Your name
 
-\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+\noindent\spacedlowsmallcaps{Contact details}\vspace{0.5em} % Personal information heading
 
-\NewEntry{}{\textit{Born in Canada,}}{20 November 1987} % Birthplace and date
+\NewEntry{address}{18 Sussex St., Flat 5, London, UK, SW1V 4RW} % Address
 
-\NewEntry{email}{\href{mailto:john@smith.com}{john@smith.com}} % Email address
+\NewEntry{email}{\href{mailto:k.shamash@protonmail.com}{k.shamash@protonmail.com}} % Email address
 
-\NewEntry{website}{\href{http://www.johnsmith.com}{http://www.johnsmith.com}} % Personal website
+\NewEntry{twitter}{\href{http://www.twitter.com/katieshamash}{@katieshamash}} % Twitter
 
-\NewEntry{phone}{(H) +1 (000) 111 1111\ \ $\cdotp$\ \ (M) +1 (000) 111 1112} % Phone number(s)
+\NewEntry{phone}{+44 7548 253935} % Phone number(s)
 
 \vspace{1em} % Extra white space between the personal information section and goal
-
-\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
-
-\Description{Gain fundamental experience in my area of interest and expertise.}\vspace{2em} % Goal text
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE
@@ -73,21 +75,27 @@
 
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
-\NewEntry{2012--Present}{1\textsuperscript{st} Year Analyst, \textsc{Lehman Brothers}}
+\NewEntry{Aug 2015-Present}{Scholarly communications analyst, \textsc{Jisc}}
 
-\Description{\MarginText{Lehman Brothers}Developed spreadsheets for risk analysis on exotic derivatives on a wide array of commodities (ags, oils, precious and base metals), managed blotter and secondary trades on structured notes, liaised with Middle Office, Sales and Structuring for bookkeeping. \\ Reference: John \textsc{McDonald}\ \ $\cdotp$\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:john@lehman.com}{john@lehman.com}}
-
-%------------------------------------------------
-
-\NewEntry{2010--2011}{Summer Intern, \textsc{Initech Inc}  --- Chicago}
-
-\Description{\MarginText{Initech Inc}Rated "truly distinctive" for Analytical Skills and Teamwork. \\ Reference: Bill \textsc{Lumbergh}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:bill@initech.com}{bill@initech.com}}
+\Description{\MarginText{Jisc (London)}Worked directly with relevant stakeholders to improve data quality and transparency. Gathered data from a wide range of sources and analyzed it in a systematic and reproducible way. Clearly communicated findings to non-technical audiences through blog posts, interactive visualizations, reports, and presentations. Successfully influenced publisher negotiations and funder policies with data-driven evidence. Tested and refined dashboard software with end users to deliver a marketable product.}
 
 %------------------------------------------------
 
-\NewEntry{Jan-Mar 2011}{Computer Technician, \textsc{Buy More} --- Burbank}
+\NewEntry{May-Aug 2015}{Research assistant, \textsc{Simon Fraser University}}
 
-\Description{\MarginText{Buy More}Worked in the Nerd Herd and helped to solve computer problems by asking customers to turn their computers off and on again. \\ Reference: Big \textsc{Mike}\ \ +1 (000) 111 1111\ \ $\cdotp$\ \ \href{mailto:mike@buymore.com}{mike@buymore.com}}
+\Description{\MarginText{Simon Fraser University (Vancouver)}Prepared an extensive literature review surveying the humanities monograph industry. Conducted research into university presses' digital initiatives. Connected university presses with complementary strengths and interests to spur innovation.}
+
+%------------------------------------------------
+
+\NewEntry{2011-2012}{Freelance editor, \textsc{Second Generation Press}}
+
+\Description{\MarginText{Second Generation Press (Montreal)}Edited works prior to publication, reviewed manuscripts, and advised digital production strategy.}
+
+%------------------------------------------------
+
+\NewEntry{2011}{Web sales \& marketing manager, \textsc{Black Rose Books}}
+
+\Description{\MarginText{Black Rose Books (Montreal)}Doubled social media following, wrote newsletters and press releases, managed interns.}
 
 %------------------------------------------------
 
@@ -99,21 +107,30 @@
 
 \spacedlowsmallcaps{Education}\vspace{1em}
 
-\NewEntry{2011-2012}{The University of California, Berkeley}
+\NewEntry{2014-2015}{Master of Publishing candidate}
 
-\Description{\MarginText{Masters of Commerce}GPA: 8.0\ \ $\cdotp$\ \ \textit{First Class Honours}\ \ $\cdotp$\ \ School: Business and Administration\newline 
-Thesis: \textit{Money Is The Root Of All Evil -- Or Is It?}\newline
-Description: This thesis explored the idea that money has been the cause of untold anguish and suffering in the world. I found that it has, in fact, not.\newline
-Advisors: Prof.~James \textsc{Smith} \& Assoc. Prof.~Jane \textsc{Smith}}
+\Description{\MarginText{Simon Fraser University (Vancouver)}Multidisciplinary program with classes on technology, history, design, marketing, and industry of trade, magazine, and academic publishing. Hands-on projects include a course project on data analysis for scholarly communication, which used topic modelling, natural language processing, and network visualization to visualize and interpret scholarly journal data.
+}
+
+
+%------------------------------------------------
+
+\NewEntry{2009-2014}{Bachelor of Arts \& minor in Computer Science}
+	
+\Description{\MarginText{Concordia University (Montreal)}Graduated with distinction\ \ $\cdotp$\ \ \textit{Honours English and Creative Writing}\ \ $\cdotp$\ \ \textit{Minor in Computer Science}\newline
+Relevant computer science courses include probability and statistics, combinatorics,
+object-oriented programming, data structures and algorithms,
+mathematics for computer science, and
+functional and logical programming.}
+
+%------------------------------------------------
+\NewEntry{2008-2009}{Dipl\^{o}me d'\'{e}tudes coll\'{e}giales}
+
+\Description{\MarginText{Marianopolis College (Montreal)}Dean's list student\ \ $\cdotp$\ \ \textit{Creative arts, literature, and languages}\newline
+}
 
 %------------------------------------------------
 
-\NewEntry{2007-2010}{The University of California, Berkeley}
-
-\Description{\MarginText{Bachelor of Business Studies}GPA: 7.5\ \ $\cdotp$\ \ \textit{Commerce Specialization}\ \ $\cdotp$\ \ School: Business and Administration\newline
-Description: This degree focussed heavily on important things such as personnel management and mundane paperwork.}
-
-%------------------------------------------------
 
 \vspace{1em} % Extra space between major sections
 
@@ -121,82 +138,68 @@ Description: This degree focussed heavily on important things such as personnel 
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Publications}\vspace{1em}
+\spacedlowsmallcaps{Publications and presentations}\vspace{1em}
 
-\NewEntry{January 2013}{Publication Title}
+\NewEntrySmall{2018}{Navigating the complex terrain of open access}
 
-\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+\Description{\MarginText{Special issue}A special journal issue showcasing achievements of institutions in promoting open access. Currently in submission stage. \textit{Sage Open}.
+ \\Guest editors: Frank \textsc{Manista}, ~Mafalda \textsc{Marques}, ~Katie \textsc{Shamash}, ~Graham \textsc{Stone}
+}
+
+\NewEntrySmall{2017}{Reassembling scholarly communications: an evaluation of the Andrew W. Mellon Foundation’s monograph initiative}
+
+\Description{\MarginText{Journal article}A consideration of the Andrew W. Mellon Foundation’s 2014--2015 scholarly communications initiative, which focused on helping to develop new capacity in the monograph-publishing ecosystem. \textit{The Journal of Electronic Publishing}. \href{http://dx.doi.org/10.3998/3336451.0020.101}{doi:10.3998/3336451.0020.101} \\ Authors: John W. \textsc{Maxwell}, ~Alessandra \textsc{Bordini}, ~Katie \textsc{Shamash}}
 
 %------------------------------------------------
 
-\NewEntry{Sept. 2012}{Publication Title}
+\NewEntrySmall{2016}{Article processing charges and subscriptions: monitoring open access costs}
 
-\Description{\MarginText{Full Journal Name}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nisl tellus, sodales non pulvinar in, adipiscing sit amet purus. Suspendisse sed facilisis diam. Sed ornare sem nec justo adipiscing nec venenatis lectus commodo. Mauris non neque ligula. Pellentesque sed quam eu felis iaculis iaculis ac a leo. Suspendisse neque neque, placerat id adipiscing et, elementum eu sem.\\ Authors: John \textsc{Smith}, ~James \textsc{Smith}}
+\Description{\MarginText{Report}The largest-scale analysis of open access charges in the UK. Widely shared on social media, covered in a press article, and made into a podcast. The underlying data and analysis have been used in further research worldwide. An early draft informed the 2015 Tickell report on open access to the Department of Business, Energy, and Industrial Strategy. Prepared for Jisc. \href{https://www.jisc.ac.uk/reports/apcs-and-subscriptions}{jisc.ac.uk/reports/apcs-and-subscriptions} \\Author: Katie \textsc{Shamash}}
+
 
 %------------------------------------------------
+
+
+\NewEntrySmall{2015}{Teaching data analysis in the social sciences: a case study with article level metrics}
+
+\Description{\MarginText{Book chapter}A book chapter on how open scholarly communications data can be used to build data literacy and skills for humanities students. \textit{Open Data as Open Educational Resources}. Eds. Atenas, J. and Havemann, L. \href{http://dx.doi.org/10.6084/m9.figshare.1590031}{doi:10.6084/m9.figshare.1590031}
+ \\ Authors: Katie \textsc{Shamash}, ~Juan Pablo \textsc{Alperin}, ~Alessandra \textsc{Bordini}
+}
+
+
+\Description{\MarginText{Presentations}2017\ \ $\cdotp$\ \ "Article processing charges and subscriptions: Monitoring open access costs in the United Kingdom" \ \ $\cdotp$\ \  \textsc{OpenAIRE} \ \ $\cdotp$\ \  Oslo}
+
+
+
+
+
+\Description{2016\ \ $\cdotp$\ \ "Seven key findings on article processing charges" \ \ $\cdotp$\ \  \textsc{Open Access Good Practice} \ \ $\cdotp$\ \  Bath}
+
+
+
+\Description{2016\ \ $\cdotp$\ \ "Making sense of open scholarly communications data" \ \ $\cdotp$\ \  \textsc{Digifest} \ \ $\cdotp$\ \  Birmingham}
+
 
 \vspace{1em} % Extra space between major sections
-
 %----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Computer Skills}\vspace{1em}
-
-\Description{\MarginText{Basic}\textsc{java}, Adobe Illustrator}
-
-\Description{\MarginText{Intermediate}\textsc{python}, \textsc{html}, \LaTeX, OpenOffice, Linux, Microsoft Windows}
-
-\Description{\MarginText{Advanced}Computer Hardware and Support}
-
-%------------------------------------------------
-
-\vspace{1em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	OTHER INFORMATION
+%	SKILLS
 %----------------------------------------------------------------------------------------
 
-\spacedlowsmallcaps{Other Information}\vspace{1em}
+\spacedlowsmallcaps{Skills}\vspace{1em}
 
-\Description{\MarginText{Awards}2011\ \ $\cdotp$\ \ School of Business Postgraduate Scholarship}
+\Description{\MarginText{Languages}English (native speaker), French (fluent)}
 
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
+\Description{\MarginText{Data analysis}Python, R, SQL, Excel, OpenRefine, Weka}
 
-\Description{2010\ \ $\cdotp$\ \ Top Achiever Award -- Commerce}
+\Description{\MarginText{Mathematics}Probability and statistics, machine learning, natural language processing, network analysis}
 
-%------------------------------------------------
+\Description{\MarginText{Design}HTML, CSS, Adobe InDesign, \LaTeX}
 
-\vspace{1em}
+\Description{\MarginText{Visualisation}Tableau, Javascript (D3.js), Matplotlib, Gephi}
 
-\Description{\MarginText{Communication Skills}2010\ \ $\cdotp$\ \ Oral Presentation at the California Business Conference}
-
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{2009\ \ $\cdotp$\ \ Poster at the Annual Business Conference in Oregon}
+\Description{\MarginText{Office}Windows, Linux, Microsoft Office}
 
 %------------------------------------------------
-
-\vspace{1em}
-
-\newlength{\langbox} % Create a new length for the length of languages to keep them equally spaced
-\settowidth{\langbox}{English} % Length equals the length of "English" - if you have a longer language in your list put it here
-
-\Description{\MarginText{Languages}\parbox{\langbox}{\textsc{English}}\ \ $\cdotp$\ \ \ Mothertongue}
-
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\parbox{\langbox}{\textsc{Spanish}}\ \ $\cdotp$\ \ \ Intermediate (conversationally fluent)}
-
-\vspace{-0.5em} % Negative vertical space to counteract the vertical space between every \Description command
-
-\Description{\parbox{\langbox}{\textsc{Dutch}}\ \ $\cdotp$\ \ \ Basic (simple words and phrases only)}
-
-\vspace{1em} % Negative vertical space to counteract the vertical space between every \Description command
-
-%------------------------------------------------
-
-\Description{\MarginText{Interests}Piano\ \ $\cdotp$\ \ Cooking\ \ $\cdotp$\ \ Running\ \ $\cdotp$\ \ Chess\ \ $\cdotp$\ \ Dancing}
 
 %----------------------------------------------------------------------------------------
 
